@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App/>,
   },
+  //Cambio de pagina para recuperacion de contraseña
   {
   path: "/RecuperacionContraseña",
     element: <RecuperacionContraseña/>,
