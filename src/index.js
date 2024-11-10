@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RecuperacionContraseña } from './RecuperacionContraseña';
 import { Cuestionarios } from './CrearFormularios';
+import {Graficas} from './Graficas';
 import { 
   createBrowserRouter,
   RouterProvider,
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
   {
     path: "/CrearFormularios",
      element: <Cuestionarios/>
-  }
+  },
+  {
+    path: "/Graficas",
+      element: <Graficas/>,
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
