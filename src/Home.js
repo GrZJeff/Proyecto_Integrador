@@ -1,13 +1,6 @@
 import React from 'react';
 import {  Nav } from  'react-bootstrap';
 
-
-
-
-
-
-
-
 const Home = () => {
   return (
     <div>
