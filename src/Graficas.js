@@ -1,14 +1,13 @@
+
 import React, { useState } from "react";
 import { Card, Container, Form, Button } from 'react-bootstrap';
-import { Bar } from 'react-chartjs-2';
 
-export const Cuestionarios = () => {
+export const Graficas = () => {
     const [questions, setQuestions] = useState([]);
     const [responses, setResponses] = useState({});
 
     const handleAddQuestion = () => {
-        // Código para añadir una nueva pregunta
-        // Aquí podrías agregar una pregunta y sus opciones
+     
     };
 
     const handleResponseChange = (questionIndex, response) => {
@@ -18,13 +17,13 @@ export const Cuestionarios = () => {
         }));
     };
 
-    // Datos para el gráfico
+    // Datos para los gráficos
     const data = {
         labels: Object.keys(responses),
         datasets: [
             {
                 label: 'Respuestas',
-                data: Object.values(responses).map(r => r.length), // Usa la longitud o el valor según la respuesta
+                data: Object.values(responses).map(r => r.length), // Usa  el valor según la respuesta
                 backgroundColor: 'rgba(75, 192, 192, 0.6)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
@@ -42,7 +41,7 @@ export const Cuestionarios = () => {
                 </Card.Body>
             </Card>
 
-            {/* Preguntas */}
+           
             {questions.map((q, index) => (
                 <Card key={index} className="mt-4">
                     <Card.Body>
@@ -52,16 +51,17 @@ export const Cuestionarios = () => {
                             value={q.text} 
                             onChange={(e) => handleResponseChange(index, e.target.value)}
                         />
-                        {/* Añade más opciones y lógica para manejar el tipo de pregunta */}
+                      
                     </Card.Body>
                 </Card>
             ))}
 
             <Button className="mt-4" onClick={handleAddQuestion}>Nueva Pregunta</Button>
 
-            {/* Gráfico de respuestas */}
+            {/* Gráfico de  las respuestas */}
             <h3 className="mt-4">Gráfico de Respuestas</h3>
-            <Bar data={data} />
         </Container>
     );
 };
+
+

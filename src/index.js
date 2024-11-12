@@ -31,8 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Graficas",
-     element: <Graficas
-/>
+     element: <Graficas/>
   },
 ]);
 

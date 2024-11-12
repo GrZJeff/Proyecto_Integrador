@@ -1,8 +1,19 @@
-import { Card, Container } from "react-bootstrap"
+import { Card, Container, Form, props} from "react-bootstrap"
 import { useState } from "react"
 
 export const AnswerQuestionnaries =()=>{
-    const [questionnaire, setQuestionnarire] = useState(props.questionnaire)
+    const [questionnaire, setQuestionnarire] = useState(
+        {
+            title: "",
+            description: "",
+            questions: [
+                {
+                    type: "",
+                    option: []
+                }
+            ]
+        }
+    )
     return(
         <Container>
             <Card>

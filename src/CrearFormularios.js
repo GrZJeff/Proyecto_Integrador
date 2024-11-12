@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, Container, Form, Button } from 'react-bootstrap';
+import AnswerQuestionnaries from "./AswerQuestionnaries";
 
 
 
@@ -55,6 +56,9 @@ export const Cuestionarios =()=>{
             </Card>
           <Button className="mt-4" onClick="">Nueva Pregunta</Button>
           <h3 className="mt-4">Vistas Previas</h3>
+
+
+
         </Container>
         
       );
